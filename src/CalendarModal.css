@@ -1,0 +1,98 @@
+.calendar-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.15);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+.calendar-modal-box {
+  background: #fff;
+  padding: 28px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.13);
+  min-width: 320px;
+  display: flex; flex-direction: column; align-items: center;
+}
+.calendar-header-row {
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 12px;
+}
+.arrow-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2563eb;
+  cursor: pointer;
+  width: 32px; height: 32px;
+  transition: color 0.2s;
+}
+.calendar-title-row {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #22223b;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 36px);
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.calendar-header-cell {
+  color: #334155;
+  font-size: 0.98rem;
+  text-align: center;
+  font-weight: 600;
+}
+.calendar-cell {
+  background: #f7faff;
+  border-radius: 8px;
+  height: 36px;
+  font-size: 1.04rem;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.16s, color 0.16s;
+}
+.calendar-cell.empty {
+  background: transparent;
+  cursor: default;
+}
+.calendar-cell.selected, .calendar-cell:hover:not(.empty) {
+  background: #2563eb;
+  color: white;
+}
+.btn.submit-btn {
+  background: #22c55e;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 1.06rem;
+  cursor: pointer;
+  transition: background 0.18s;
+  margin-top: 8px;
+}
+.btn.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn.cancel-btn {
+  background: #b91c1c;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 0;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.btn.cancel-btn:hover {
+  background: #991b1b;
+}

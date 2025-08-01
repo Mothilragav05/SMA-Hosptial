@@ -1,0 +1,89 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.page-background {
+  min-height: 100vh;
+  min-width: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #78c5df49;
+  font-family: sans-serif;
+}
+.company-header {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  /* Optional: background and padding for clarity on complex backgrounds */
+  /* background: rgba(255,255,255,0.6); border-radius: 8px; padding: 4px 12px; */
+}
+
+.company-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: -13px;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  letter-spacing: 2px;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.776);
+  padding: 40px 70px;
+  border-radius: 16px;
+  box-shadow: 0 16px 24px rgba(237, 18, 18, 0.352);
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.teeth-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: -30px;
+  margin-top: -30px;
+  display: block;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+
+.doctor-btn {
+  background-color: #3b82f6;
+  
+}
+.doctor-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Patient button styles */
+.patient-btn {
+  background-color: #22c55e;
+}
+.patient-btn:hover {
+  background-color: #16a34a;
+}

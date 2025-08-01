@@ -1,0 +1,341 @@
+.doc-dashboard-bg {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #c7d2fe 0, #ecfeff 80%);
+  display: flex;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.doc-sidebar {
+  background: #2563eb;
+  color: #fff;
+  min-width: 200px;
+  max-width: 230px;
+  padding: 36px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar-logo {
+  font-size: 1.35rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  align-items: flex-start;
+  padding-left: 28px;
+}
+.sidebar-nav a {
+  text-decoration: none;
+  color: #bcd7ff;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+.sidebar-nav a.active, .sidebar-nav a:hover {
+  color: #fff;
+}
+
+.doc-main {
+  flex: 1;
+  padding: 36px 40px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.doc-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+.doc-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #3b82f6;
+}
+
+.doc-stats-row {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 14px;
+}
+.doc-stat-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 6px 20px rgba(37,99,235,0.08);
+  border-left: 6px solid #2563eb;
+  min-width: 160px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.stat-label { color: #64748b; font-size: 1rem; }
+.stat-value { font-size: 2rem; font-weight: 700; }
+
+.doc-sections-row {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.doc-card {
+  background: #f8fafc;
+  border-radius: 13px;
+  padding: 22px 24px;
+  box-shadow: 0 3px 12px rgba(37,99,235,0.10);
+  min-width: 340px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.doc-card.medium { flex: 2; }
+.doc-card.small { flex: 1; min-width: 220px; }
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+.doc-table th,
+.doc-table td {
+  padding: 7px 9px;
+  text-align: left;
+}
+.doc-table th {
+  background: #e0eaff;
+  color: #374151;
+  font-weight: 600;
+}
+.doc-table tr {
+  border-bottom: 1px solid #e0eaff;
+}
+.status-badge {
+  font-size: 0.95em;
+  padding: 3px 8px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+}
+.status-badge.waiting {
+  background: #2563eb;     /* bold blue */
+  color: #fff;
+}
+.status-badge.inconsultation {
+  background: #eab308;     /* yellow/gold */
+  color: #22223b;
+}
+.status-badge.upcoming {
+  background: #0cda95;     /* strong teal/green */
+  color: #fff;
+}
+.status-badge.appointment {
+  background: #3b82f6;     /* medium blue (different from waiting) */
+  color: #fff;
+}
+.status-badge.completed {
+  background: #10b981;     /* bright green */
+  color: #fff;
+}
+
+.doc-appt-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.doc-appt-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.status-dot {
+  width: 10px; height: 10px; border-radius: 5px; display: inline-block; margin-left: 8px;
+}
+.status-dot.waiting { background: #2563eb; }
+.status-dot.inconsultation { background: #eab308; }
+.status-dot.upcoming { background: #22c55e; }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(30,41,59,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.patient-modal-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 30px;
+  min-width: 530px;
+  max-width: 550px;
+  box-shadow: 0 12px 34px rgba(37, 99, 235, 0.14);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.modal-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.modal-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.icon-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s;
+  line-height: 1;
+}
+.icon-close-btn:hover {
+  color: #ef4444;
+}
+
+.input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.input-row label {
+  font-weight: 500;
+  margin-bottom: 2px;
+  color: #374151;
+  font-size: 0.98rem;
+}
+.input-row input,
+.input-row select {
+  padding: 10px 12px;
+  border-radius: 7px;
+  border: 1px solid #cbd5e1;
+  font-size: 1.06rem;
+  background: #f9fafb;
+  transition: border-color 0.2s;
+}
+.input-row input:focus,
+.input-row select:focus {
+  border-color: #2563eb;
+  outline: none;
+  background: #e0e7ff;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.btn.submit-btn,
+.btn.cancel-btn {
+  padding: 10px 18px;
+  font-weight: 600;
+  flex: 1;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.submit-btn:hover {
+  background: #16a34a;
+}
+
+.btn.cancel-btn:hover {
+  background: #fee2e2;
+}
+.doc-dashboard-bg.light {
+  background-color: #f9fafb;
+  color: #111827;
+}
+.doc-dashboard-bg.dark {
+  background-color: #111827;
+  color: #f9fafb;
+}
+/* Optional: theme classes for body (for popups/modals, etc.) */
+body.light-theme {
+  background: #f9fafb !important;
+  color: #111827;
+}
+body.dark-theme {
+  background: #111827 !important;
+  color: #f9fafb;
+}
+.doc-card, .doc-table, .doc-stats-row, .doc-sections-row {
+  background-color: inherit; /* Use theme bg */
+  color: inherit;
+}
+/* Ensure the sidebar goes dark */
+.doc-dashboard-bg.dark .doc-sidebar {
+  background: #232a35; /* or a suitable dark color */
+  color: #f9fafb;
+}
+.doc-dashboard-bg.dark .sidebar-logo {
+  color: #dbeafe;
+}
+.doc-dashboard-bg.dark .sidebar-nav a {
+  color: #92a7cf;
+}
+.doc-dashboard-bg.dark .sidebar-nav a.active,
+.doc-dashboard-bg.dark .sidebar-nav a:hover {
+  color: #fff;
+}
+
+/* Make all main cards/tables inherit dark background */
+.doc-dashboard-bg.dark .doc-card,
+.doc-dashboard-bg.dark .doc-main,
+.doc-dashboard-bg.dark .doc-stats-row,
+.doc-dashboard-bg.dark .doc-table,
+.doc-dashboard-bg.dark .modal-overlay,
+.doc-dashboard-bg.dark .patient-modal-box {
+  background-color: #232a35;
+  color: #f9fafb;
+}
+
+.doc-dashboard-bg.dark .doc-table th {
+  background: #202940;
+  color: #dbeafe;
+}
+.doc-dashboard-bg.dark .doc-table tr {
+  border-bottom: 1px solid #363c49;
+}
+
+.doc-dashboard-bg.dark .input-row label {
+  color: #dbeafe;
+}
+.doc-dashboard-bg.dark .input-row input,
+.doc-dashboard-bg.dark .input-row select {
+  background: #232a35;
+  color: #f9fafb;
+  border-color: #555b6c;
+}
+.doc-dashboard-bg.dark .input-row input:focus,
+.doc-dashboard-bg.dark .input-row select:focus {
+  background: #1a202e;
+  border-color: #3b82f6;
+}
+

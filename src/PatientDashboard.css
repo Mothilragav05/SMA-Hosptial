@@ -1,0 +1,124 @@
+.dashboard-background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0f7fa;
+}
+.dashboard-container {
+  position: relative;
+  background: #fff;
+  padding: 75px 75px;
+  border-radius: 24px;
+  box-shadow: 0 16px 24px rgba(177, 8, 229, 0.461);
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.logout-link {
+  position: absolute;
+  top: 20px;         /* distance from top of the white box */
+  right: 24px;       /* distance from right edge of the white box */
+  color: #ef4444;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.05rem;
+  z-index: 2;
+  transition: color 0.16s;
+}
+.logout-link:hover {
+  color: #b91c1c;
+}
+.btn.action-btn {
+  margin-top: 12px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 12px 0;
+  width: 200px;
+  transition: background 0.2s;
+}
+.btn.action-btn:hover {
+  background: #3b82f6;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right:0; bottom:0;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  /* box-shadow: 0 16px 24px rgba(237, 18, 18, 0.352); */
+}
+.modal-box {
+  background: #fff;
+  border-radius: 18px;
+  padding: 36px 68px;
+  min-width: 180px;
+  /* box-shadow: 0 16px 24px rgba(237, 18, 18, 0.352); */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  gap: 18px;
+}
+textarea {
+  resize: vertical;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 10px 0;
+}
+.calendar-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.date-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  margin: 3px;
+  background: #f1f5f9;
+  font-weight: 600;
+  cursor: pointer;
+}
+.date-btn:hover {
+  background: #c3ddfd;
+}
+.btn.submit-btn {
+  background: #22c55e;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 14px;
+}
+.btn.submit-btn:hover {
+  background: #16a34a;
+}
+.popup {
+  position: fixed;
+  top: 24px; left: 0; right: 0;
+  margin: auto;
+  background: #2563eb;
+  color: #fff;
+  padding: 16px 40px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  z-index: 999;
+  width: fit-content;
+  min-width: 200px;
+}
